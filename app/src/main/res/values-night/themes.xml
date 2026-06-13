@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.CricketScore" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_indigo</item>
+
+    </style>
+
+    <!-- Manifest looks for this name -->
+    <style name="Theme.CricketScore" parent="Base.Theme.CricketScore" />
+</resources>

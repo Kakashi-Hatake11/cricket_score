@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tv_toss_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toss"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rg_heads_tails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/rb_heads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heads" />
+
+        <RadioButton
+            android:id="@+id/rb_tails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Tails" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_do_toss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Flip Coin" />
+
+    <TextView
+        android:id="@+id/tv_toss_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary" />
+
+    <LinearLayout
+        android:id="@+id/layout_decision"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Option:"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn_choose_bat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Batting" />
+
+        <Button
+            android:id="@+id/btn_choose_bowl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bowling" />
+    </LinearLayout>
+
+</LinearLayout>

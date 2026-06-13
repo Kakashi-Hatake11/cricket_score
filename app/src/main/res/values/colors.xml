@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand / Primary Colors -->
+    <color name="colorPrimary">#6366F1</color>
+    <color name="colorPrimaryDark">#4F46E5</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Premium Indigo Palette -->
+    <color name="brand_indigo">#6366F1</color>
+    <color name="brand_indigo_soft">#EEF2FF</color>
+
+    <!-- Premium Slate Palette -->
+    <color name="premium_slate_900">#0F172A</color>
+    <color name="premium_slate_400">#94A3B8</color>
+
+    <!-- Backgrounds -->
+    <color name="background">#F4F7FC</color>
+    <color name="premium_bg">#F1F5F9</color>
+
+    <!-- Standard UI Colors -->
+    <color name="textPrimary">#1A1C1E</color>
+    <color name="textSecondary">#9BA1A7</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Default Material Colors -->
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <style name="Base.Theme.CricketScore" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_indigo</item>
+        <!-- Use this standard Android attribute instead of the Material one if it fails -->
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+
+    <style name="Theme.CricketScore" parent="Base.Theme.CricketScore" />
+</resources>

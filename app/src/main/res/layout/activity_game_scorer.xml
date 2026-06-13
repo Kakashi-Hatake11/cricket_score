@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FC"
+    android:padding="20dp"
+    android:fitsSystemWindows="true"> <!-- ADDED THIS LINE -->
+
+    <!-- Header: Match Info -->
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- ... rest of your code remains the same ... -->
+        <TextView
+            android:id="@+id/tv_batting_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.1"
+            android:text="TEAM SCORE"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_batting_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="0 / 0"
+            android:textColor="#1A1C1E"
+            android:textSize="56sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_bowling_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E0E7FF"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="0.0 OVERS"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 2. Target Info -->
+    <TextView
+        android:id="@+id/tv_to_win"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_modern"
+        android:backgroundTint="#151A1C1E"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Match Started"
+        android:textColor="#49454F"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_header" />
+
+    <!-- 3. Current Over Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cd_this_over"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/tv_to_win">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This Over"
+                android:textColor="#9BA1A7"
+                android:textSize="11sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.05"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_this_over_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="• • • • • •"
+                android:textColor="#1A1C1E"
+                android:textSize="18sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 4. Control Pad (Pushed to Bottom) -->
+    <GridLayout
+        android:id="@+id/grid_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="3"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_quit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Scoring Buttons -->
+        <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/btn_dot" android:text="0" android:textSize="18sp" android:layout_columnWeight="1" android:textColor="@color/black" />
+        <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/btn_one" android:text="1" android:textSize="18sp" android:layout_columnWeight="1" android:textColor="@color/black" />
+        <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/btn_two" android:text="2" android:textSize="18sp" android:layout_columnWeight="1" android:textColor="@color/black"/>
+        <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/btn_three" android:text="3" android:textSize="18sp" android:layout_columnWeight="1" android:textColor="@color/black"/>
+
+        <Button style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:id="@+id/btn_four" android:text="4" android:backgroundTint="#4CAF50" android:layout_columnWeight="1" android:textColor="@color/black" />
+        <Button style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:id="@+id/btn_six" android:text="6" android:backgroundTint="#2E7D32" android:layout_columnWeight="1" android:textColor="@color/black"/>
+        <Button style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/btn_wide" android:text="WD" android:layout_columnWeight="1" android:textColor="@color/black"/>
+        <Button style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/btn_no_ball" android:text="NB" android:layout_columnWeight="1" android:textColor="@color/black"/>
+
+        <Button style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:id="@+id/btn_out" android:text="OUT" android:backgroundTint="#E53935"
+            android:layout_columnSpan="2" android:layout_columnWeight="2" />
+        <Button style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/btn_undo" android:text="UNDO"
+            android:layout_columnSpan="2" android:layout_columnWeight="2" />
+
+    </GridLayout>
+
+    <!-- 5. Bottom Finish Button -->
+    <Button
+        android:id="@+id/btn_quit"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Finish Match"
+        android:textColor="#E53935"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
